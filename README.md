@@ -76,6 +76,10 @@ EDUCATION
 Park Point University - Pittsburgh, PA
 Bachelor of Arts Hospitality Management
 2001 - 2005
+
+Pittsburgh Technical College - Pittsburgh, PA
+Associate Degree, Culinary Arts
+1999 - 2001
 ```
 
 And example output:
@@ -92,33 +96,33 @@ And example output:
       "date": "March 2014 - Current",
       "name": "Outback Steakhouse",
       "location": "Pittsburgh, PA",
-      "title": "Restaurant Manager":
+      "title": "Restaurant Manager",
       "bullets": [
-        "+ Reduced labor costs by 17% percent while maintaining excellent service and profit levels",
-        "+ Managed a 7-person team of cooks and back of house staff and a team of 8 front house staff for a busy steakhouse restaurant",
-        "+ Continuously evaluated business operations to effectively align workflows for optimal area coverage increasing customer satisfaction rating by 80%"
+        "Reduced labor costs by 17% percent while maintaining excellent service and profit levels",
+        "Managed a 7-person team of cooks and back of house staff and a team of 8 front house staff for a busy steakhouse restaurant",
+        "Continuously evaluated business operations to effectively align workflows for optimal area coverage increasing customer satisfaction rating by 80%"
       ]
     },
     {
       "date": "December 2010 - February 2014",
       "name": "TGI Fridays",
       "location": "Pittsburgh, PA Assistant",
-      "title": "Restaurant Manager":
+      "title": "Restaurant Manager",
       "bullets": [
-        "+ Reduced restaurant’s annual food and labor costs by 15% through proper budgeting, scheduling and management of inventory",
-        "+ Kept restaurant compliant with all federal, state and local hygiene and food safety regulations which kept food safety score between 95-100 every inspection",
-        "+ Coordinated kitchen stations with managers to cut down on customer wait times by 50%"
+        "Reduced restaurant’s annual food and labor costs by 15% through proper budgeting, scheduling and management of inventory",
+        "Kept restaurant compliant with all federal, state and local hygiene and food safety regulations which kept food safety score between 95-100 every inspection",
+        "Coordinated kitchen stations with managers to cut down on customer wait times by 50%"
       ]
     },
     {
       "date": "July 2007 - November 2010",
       "name": "BJ’s Restaurants, Inc",
       "location": "Pittsburgh, PA",
-      "title": "Restaurant Team Leader":
+      "title": "Restaurant Team Leader",
       "bullets": [
-        "+ Assisted customers in placing special orders for large-scale events such as corporate events and birthday parties",
-        "+ Recruited and hired over 10 employees offering talent, charisma and experience to restaurant team",
-        "+ Pitched in to help host, waitstaff and bussers during exceptionally busy times such as dinner hour"
+        "Assisted customers in placing special orders for large-scale events such as corporate events and birthday parties",
+        "Recruited and hired over 10 employees offering talent, charisma and experience to restaurant team",
+        "Pitched in to help host, waitstaff and bussers during exceptionally busy times such as dinner hour"
       ]
     }
   ],
@@ -138,6 +142,12 @@ And example output:
       "location": "Pittsburgh, PA",
       "degree": "Bachelor of Arts Hospitality Management",
       "date": "2001 - 2005"
+    },
+    {
+      "institution": "Pittsburgh Technical College",
+      "location": "Pittsburgh, PA",
+      "degree": "Associate Degree, Culinary Arts",
+      "date": "1999 - 2001"
     }
   ]
 }

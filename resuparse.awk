@@ -90,14 +90,22 @@ state == "find_experience_title" {
 }
 
 state == "find_experience_bullets" && /^(\+|*)/ {
+  # Experience bullets start with a list character
   bullet_count = experience[experience_count, "bullet_count"]
   if (bullet_count) {
+    # New experience bullet, increment count
     bullet_count++
   } else {
+    # If no bullet count is set, this is the first bullet
+    # First experience bullet, set count
     bullet_count = 1
   }
+  # Store bullet count on experience array, to be used
+  # by JSON template during render
   experience[experience_count, "bullet_count"] = bullet_count
-  # Experience bullets start with a list character
+  # Remove extranneous characters before text
+  sub(/^[^[:alpha:]]*/, "", $0)
+  # Assign the bullet
   experience[experience_count, "bullets", bullet_count] = $0
   next
 }
@@ -105,6 +113,10 @@ state == "find_experience_bullets" && /^(\+|*)/ {
 state == "find_experience_bullets" {
   bullet_count = experience[experience_count, "bullet_count"]
   bullet = experience[experience_count, "bullets", bullet_count]
+  # Remove extranneous characters before text
+  sub(/^[^[:alpha:]]*/, "", $0)
+  # The `find_experience_bullets` state is still active, but this is
+  # not a new bullet. Append this line to the previous bullet.
   experience[experience_count, "bullets", bullet_count] = bullet " " $0
   next
 }
@@ -115,29 +127,30 @@ state == "find_experience_bullets" {
 }
 
 state == "find_skills" {
-  skills[skill_count] = $0
+  # New skill, increment count
   skill_count++
+  skills[skill_count] = $0
   next
 }
 
 state == "find_education_institution_location" {
+  # New education, increment count
+  education_count++
   split($0, education_institution_location, / - /)
-  education_institution[education_count] = education_institution_location[1]
-  education_location[education_count] = education_institution_location[2]
+  education[education_count, "institution"] = education_institution_location[1]
+  education[education_count, "location"] = education_institution_location[2]
   state = "find_education_degree"
   next
 }
 
 state == "find_education_degree" {
-  education_degree[education_count] = $0
+  education[education_count, "degree"] = $0
   state = "find_education_date"
   next
 }
 
 state == "find_education_date" {
-  education_date[education_count] = $0
-  # Increment education count for the next education
-  education_count++
+  education[education_count, "date"] = $0
   # Look for another education
   state = "find_education_institution_location"
   next
@@ -156,50 +169,30 @@ END {
     printf "      \"date\": \"%s\",\n", experience[exp_idx, "date"]
     printf "      \"name\": \"%s\",\n", experience[exp_idx, "org"]
     printf "      \"location\": \"%s\",\n", experience[exp_idx, "location"]
-    printf "      \"title\": \"%s\":\n", experience[exp_idx, "title"]
+    printf "      \"title\": \"%s\",\n", experience[exp_idx, "title"]
     printf "      \"bullets\": [\n"
     bullet_count = experience[exp_idx, "bullet_count"]
     for (bullet_idx = 1; bullet_idx <= bullet_count; bullet_idx++) {
       bullet = experience[exp_idx, "bullets", bullet_idx]
-      if (bullet_idx < bullet_count) {
-        # If there's another bullet, render a separator
-        printf "        \"%s\",\n", bullet
-      } else {
-        printf "        \"%s\"\n", bullet
-      }
+      printf "        \"%s\"%s\n", bullet, (bullet_idx < bullet_count ? "," : "")
     }
     printf "      ]\n"
-    if (exp_idx < experience_count) {
-      # If there's another experience, render a separator
-      printf "    },\n"
-    } else {
-      printf "    }\n"
-    }
+    printf "    }%s\n", (exp_idx < experience_count ? "," : "")
   }
   printf "  ],\n"
   printf "  \"skills\": [\n"
-  for (skill_idx in skills) {
-    if ((skill_idx + 1) in skills) {
-      # If there's another skill, render a separator
-      printf "    \"%s\",\n", skills[skill_idx]
-    } else {
-      printf "    \"%s\"\n", skills[skill_idx]
-    }
+  for (skill_idx = 1; skill_idx <= skill_count; skill_idx++) {
+    printf "    \"%s\"%s\n", skills[skill_idx], (skill_idx < skill_count ? "," : "")
   }
   printf "  ],\n"
   printf "  \"education\": [\n"
-  for (education_idx in education_date) {
+  for (education_idx = 1; education_idx <= education_count; education_idx++) {
     printf "    {\n"
-    printf "      \"institution\": \"%s\",\n", education_institution[education_idx]
-    printf "      \"location\": \"%s\",\n", education_location[education_idx]
-    printf "      \"degree\": \"%s\",\n", education_degree[education_idx]
-    printf "      \"date\": \"%s\"\n", education_date[education_idx]
-    if ((education_idx + 1) in education_date) {
-      # If there's another education, render a separator
-      printf "    },\n"
-    } else {
-      printf "    }\n"
-    }
+    printf "      \"institution\": \"%s\",\n", education[education_idx, "institution"]
+    printf "      \"location\": \"%s\",\n", education[education_idx, "location"]
+    printf "      \"degree\": \"%s\",\n", education[education_idx, "degree"]
+    printf "      \"date\": \"%s\"\n", education[education_idx, "date"]
+    printf "    }%s\n", (education_idx < education_count ? "," : "")
   }
   printf "  ]\n"
   printf "}\n"
