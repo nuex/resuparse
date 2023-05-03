@@ -34,24 +34,24 @@ Experienced Restaurant Manager bringing demonstrated success in developing and m
 WORK HISTORY
 ====================
 
-March 2014 to Current
-Outback Steakhouse – Pittsburgh, PA
+March 2014 - Current
+Outback Steakhouse - Pittsburgh, PA
 Restaurant Manager
 
 + Reduced labor costs by 17% percent while maintaining excellent service and profit levels
 + Managed a 7-person team of cooks and back of house staff and a team of 8 front house staff for a busy steakhouse restaurant
 + Continuously evaluated business operations to effectively align workflows for optimal area coverage increasing customer satisfaction rating by 80%
 
-December 2010 to February 2014
-TGI Fridays – Pittsburgh, PA Assistant
+December 2010 - February 2014
+TGI Fridays - Pittsburgh, PA Assistant
 Restaurant Manager
 
 + Reduced restaurant’s annual food and labor costs by 15% through proper budgeting, scheduling and management of inventory
 + Kept restaurant compliant with all federal, state and local hygiene and food safety regulations which kept food safety score between 95-100 every inspection
 + Coordinated kitchen stations with managers to cut down on customer wait times by 50%
 
-July 2007 to November 2010
-BJ’s Restaurants, Inc – Pittsburgh, PA
+July 2007 - November 2010
+BJ’s Restaurants, Inc - Pittsburgh, PA
 Restaurant Team Leader
 
 + Assisted customers in placing special orders for large-scale events such as corporate events and birthday parties
@@ -89,17 +89,33 @@ And example output:
   "summary": "Experienced Restaurant Manager bringing demonstrated success in developing and motivating strong restaurant teams capable of handling over 200 customers hourly. Keeps all areas clean and sanitized while managing inventory and preventing waste. Consistent career history of operations improvement, team building and revenue increases.",
   "experience": [
     {
-      "date": "March 2014 to Current",
-      "name": "Outback Steakhouse – Pittsburgh, PA",
-      "location": "",
+      "date": "March 2014 - Current",
+      "name": "Outback Steakhouse",
+      "location": "Pittsburgh, PA",
       "title": "Restaurant Manager":
       "bullets": [
         "+ Reduced labor costs by 17% percent while maintaining excellent service and profit levels",
         "+ Managed a 7-person team of cooks and back of house staff and a team of 8 front house staff for a busy steakhouse restaurant",
-        "+ Continuously evaluated business operations to effectively align workflows for optimal area coverage increasing customer satisfaction rating by 80% December 2010 to February 2014 TGI Fridays – Pittsburgh, PA Assistant Restaurant Manager",
+        "+ Continuously evaluated business operations to effectively align workflows for optimal area coverage increasing customer satisfaction rating by 80%"
+      ]
+    },
+    {
+      "date": "December 2010 - February 2014",
+      "name": "TGI Fridays",
+      "location": "Pittsburgh, PA Assistant",
+      "title": "Restaurant Manager":
+      "bullets": [
         "+ Reduced restaurant’s annual food and labor costs by 15% through proper budgeting, scheduling and management of inventory",
         "+ Kept restaurant compliant with all federal, state and local hygiene and food safety regulations which kept food safety score between 95-100 every inspection",
-        "+ Coordinated kitchen stations with managers to cut down on customer wait times by 50% July 2007 to November 2010 BJ’s Restaurants, Inc – Pittsburgh, PA Restaurant Team Leader",
+        "+ Coordinated kitchen stations with managers to cut down on customer wait times by 50%"
+      ]
+    },
+    {
+      "date": "July 2007 - November 2010",
+      "name": "BJ’s Restaurants, Inc",
+      "location": "Pittsburgh, PA",
+      "title": "Restaurant Team Leader":
+      "bullets": [
         "+ Assisted customers in placing special orders for large-scale events such as corporate events and birthday parties",
         "+ Recruited and hired over 10 employees offering talent, charisma and experience to restaurant team",
         "+ Pitched in to help host, waitstaff and bussers during exceptionally busy times such as dinner hour"
