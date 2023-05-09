@@ -199,19 +199,19 @@ And example letter output:
 
 ```
 {
-	"name": "MARTIN STEIN",
-	"street": "15 Applegate Way",
-	"city": "Sometown, PA 19000",
- 	"phone": "(215) 555-5555",
-	"email": "martinstein@somedomain.com",
-	"date": "March 21, 2017",
-	"recipient_name": "Christine Smith",
-	"recipient_company": "XYZ Company",
-	"recipient_street": "1224 Main St.",
-	"recipient_city": "Anytown, PA 55555",
-	"opening": "Dear Ms. Smith:",
-	"body": "Are you searching for a software engineer with a proven ability to develop high-performance applications and technical innovations? If so, please consider my enclosed resume.\n\nSince 2015, I have served as a software engineer for Action Company, where I have been repeatedly recognized for developing innovative solutions for multimillion-dollar, globally deployed software and systems. I am responsible for full lifecycle development of next-generation software, from initial requirement gathering to design, coding, testing, documentation and implementation.\n\nKnown for excellent client-facing skills, I have participated in proposals and presentations that have landed six-figure contracts. I also excel in merging business and user needs into high-quality, cost-effective design solutions while keeping within budgetary constraints.\n\nMy technical expertise includes cross-platform proficiency (Windows, Unix, Linux and VxWorks); fluency in 13 scripting/programming languages (including C, C++, VB, Java, Perl and SQL); and advanced knowledge of developer applications, tools, methodologies and best practices (including OOD, client/server architecture and self-test automation).\n\nMy experience developing user-friendly solutions on time and on budget would enable me to step into a software engineering role at XYZ Company and hit the ground running. I will follow up with you next week, and you may reach me at (215) 555-5555. I look forward to speaking with you.\n",
-	"closing": "Sincerely,",
-	"sender_name": "Martin Stein"
+  "name": "MARTIN STEIN",
+  "street": "15 Applegate Way",
+  "city": "Sometown, PA 19000",
+  "phone": "(215) 555-5555",
+  "email": "martinstein@somedomain.com",
+  "date": "March 21, 2017",
+  "recipient_name": "Christine Smith",
+  "recipient_company": "XYZ Company",
+  "recipient_street": "1224 Main St.",
+  "recipient_city": "Anytown, PA 55555",
+  "opening": "Dear Ms. Smith:",
+  "body": "Are you searching for a software engineer with a proven ability to develop high-performance applications and technical innovations? If so, please consider my enclosed resume.\n\nSince 2015, I have served as a software engineer for Action Company, where I have been repeatedly recognized for developing innovative solutions for multimillion-dollar, globally deployed software and systems. I am responsible for full lifecycle development of next-generation software, from initial requirement gathering to design, coding, testing, documentation and implementation.\n\nKnown for excellent client-facing skills, I have participated in proposals and presentations that have landed six-figure contracts. I also excel in merging business and user needs into high-quality, cost-effective design solutions while keeping within budgetary constraints.\n\nMy technical expertise includes cross-platform proficiency (Windows, Unix, Linux and VxWorks); fluency in 13 scripting/programming languages (including C, C++, VB, Java, Perl and SQL); and advanced knowledge of developer applications, tools, methodologies and best practices (including OOD, client/server architecture and self-test automation).\n\nMy experience developing user-friendly solutions on time and on budget would enable me to step into a software engineering role at XYZ Company and hit the ground running. I will follow up with you next week, and you may reach me at (215) 555-5555. I look forward to speaking with you.\n",
+  "closing": "Sincerely,",
+  "sender_name": "Martin Stein"
 }
 ```
